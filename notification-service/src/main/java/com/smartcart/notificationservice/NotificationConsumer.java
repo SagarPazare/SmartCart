@@ -1,0 +1,1 @@
+package com.smartcart.notificationservice; import org.springframework.kafka.annotation.KafkaListener; import org.springframework.stereotype.Component; @Component public class NotificationConsumer { @KafkaListener(topics="payment-completed",groupId="notification-service") public void notifyUser(String event){System.out.println("Notification sent: "+event);} }
